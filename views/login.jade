@@ -1,0 +1,18 @@
+extends layout
+block content
+	div.container
+		form.form-horizontal(method="post" style="max-width: 330px;margin:auto;")
+			h2.form-signin-heading
+				strong Sign-in
+			div.form-group
+				label(for="username") User Name
+				input.form-control(type="text", name="username")
+			div.form-group
+				label(for="password") Password
+				input.form-control(type="password", name="password")
+			button.btn.btn-lg.btn-primary.btn-block(type="submit") Login
+			if session
+				a.btn.btn-lg.btn-default.btn-block(link="/logout") Logout
+
+			- each message in flash
+				p.text-danger #{message}  
