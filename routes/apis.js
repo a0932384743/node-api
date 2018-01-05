@@ -78,10 +78,8 @@ router.get('/writeFile', function(req, res) {
                     result: true
                 });
             }
-
         });
     });
-
 });
 
 module.exports = router;

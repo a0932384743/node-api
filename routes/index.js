@@ -6,11 +6,10 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/login', function(req, res, next) {
-    res.render('login', { flash: req.flash()});
+    res.render('login', { flash: req.flash() , authebticated : req.session.authenticated || false});
 });
 
 router.post('/login', function(req, res, next) {
-    // you might like to do a database look-up or something more scalable here
     if (req.body.username && req.body.username === 'admin' && req.body.password && req.body.password === 'admin') {
         req.session.authenticated = true;
         res.redirect('/api');

@@ -10,9 +10,10 @@ block content
 			div.form-group
 				label(for="password") Password
 				input.form-control(type="password", name="password")
-			button.btn.btn-lg.btn-primary.btn-block(type="submit") Login
-			if session
-				a.btn.btn-lg.btn-default.btn-block(link="/logout") Logout
+			div
+				button.btn.btn-lg.btn-primary(type="submit") Login
+				if authebticated
+				a.btn.btn-lg.btn-default(href="/logout" , type="button") Logout
 
 			- each message in flash
 				p.text-danger #{message}  

@@ -1,8 +1,15 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+.error-template {
+    padding: 40px 15px;
+    text-align: center;
+    max-width: 500px;
+    margin: auto;
 }
 
-a {
-  color: #00B7FF;
+.error-actions {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.error-actions .btn {
+    margin-right: 10px;
 }
